@@ -1,26 +1,36 @@
+@import '../../styles.scss';
+
 .navbar-container {
     display: flex;
     align-items: center;
     width: 100%;
-    background-color: #999998;
+    background-color: $primary;
     height: 5vh;
+    padding: 1rem;
 
     .navbar-brand {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
         width: 10%;
+        color: $white;
 
-        .logo-image>img {
-            width: 100%;
-            height: 100%;
+        >span {
+            color: $accent;
         }
     }
 
     nav {
         display: flex;
-        width: 100%;
         justify-content: center;
 
-        > ul {
-            list-style: none;
+        >a {
+            color: $accent;
+
+            &.active {
+                font-weight: bold;
+                text-decoration: none;
+            }
         }
     }
 }

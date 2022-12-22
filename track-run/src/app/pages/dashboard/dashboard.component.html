@@ -1,1 +1,7 @@
-<p>dashboard works!</p>
+<!-- <button (click)="">Get Trainings</button> -->
+
+<div class="training-weeks" *ngFor="let t of trainingWeeks | keyvalue">
+    {{ t.value | json }}
+</div>
+
+<div echarts [options]="chartOptions" class="training-chart"></div>
