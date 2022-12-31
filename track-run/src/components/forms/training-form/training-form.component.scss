@@ -1,0 +1,26 @@
+@import '../../../styles';
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >form {
+        padding: 1%;
+        width: 30%;
+        gap: 0.6rem;
+        display: flex;
+        flex-direction: column;
+
+        .input-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        >.button-container {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

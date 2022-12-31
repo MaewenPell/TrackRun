@@ -7,8 +7,44 @@ $white: #ffffff;
 * {
     margin: 0;
     padding: 0;
+
+    font-family: "Roboto";
 }
 
-body {
-    font-family: "Roboto";
+button {
+    padding: 0.5rem;
+    text-transform: uppercase;
+    border: 2px solid $accent;
+    color: $primary;
+    border-radius: 1rem;
+    background-color: $accent;
+    width: 30%;
+
+    &:hover {
+        cursor: pointer;
+        color: $primary;
+        border-color: #363634;
+    }
+}
+
+select {
+    padding: 0.5rem;
+    border: 2px solid $primary;
+    border-radius: 1rem;
+
+    &:focus {
+        outline: 2px solid $accent;
+        /* oranges! yey */
+    }
+}
+
+input {
+    padding: 0.5rem;
+    border: 2px solid $primary;
+    border-radius: 1rem;
+
+    &:focus {
+        outline: 2px solid $accent;
+        /* oranges! yey */
+    }
 }

@@ -2,6 +2,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { TrainingFormComponent } from 'src/components/forms/training-form/training-form.component';
 import { NavbarComponent } from 'src/components/navbar/navbar.component';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { DashboardService } from './services/dashboard.service';
     AppRoutingModule,
     NavbarComponent,
     HttpClientModule,
+    TrainingFormComponent,
     NgxEchartsModule.forRoot({
       echarts: () => import('echarts'),
     }),

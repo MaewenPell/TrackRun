@@ -14,13 +14,11 @@ import { ChartUtilsForTrainingWeek } from './dashboard_utils';
 export class DashboardComponent implements OnDestroy, OnInit {
 
   private destroy$ = new Subject<boolean>();
-
   private trainingStartDatesInMs: number[] = [];
   private aggregationDateKms: [number, number][] = [];
 
-  chartOptions!: EChartsOption;
+  chartOptions!: any;
   trainingWeeks!: _trainingWeeksFromAPI[];
-
 
   constructor(public dashboardService: DashboardService) { }
 
@@ -36,6 +34,10 @@ export class DashboardComponent implements OnDestroy, OnInit {
 
         this.generateTrainingWeeksChart();
       })
+  }
+
+  createNewTrainingWeek() {
+    
   }
 
   generateTrainingWeeksChart() {
@@ -55,6 +57,9 @@ export class DashboardComponent implements OnDestroy, OnInit {
           showMinLabel: true,
           showMaxLabel: true
         },
+        axisTick: {
+          alignWithLabel: true,
+        }
       },
       yAxis: {
         type: 'value',

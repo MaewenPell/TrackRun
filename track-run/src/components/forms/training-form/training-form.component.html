@@ -1,0 +1,30 @@
+<div class="form-container">
+    <form [formGroup]="trainingWeekForm" (ngSubmit)="postTrainingData()">
+        <div class="input-container">
+            <label for="trainingDate">Start Date</label>
+            <input id="trainingDate" type="date" formControlName="startDate" valueAsDate>
+        </div>
+
+        <div class="input-container">
+            <label for="trainingKm">Km</label>
+            <input id="km" type="number" formControlName="km">
+        </div>
+
+        <div class="input-container">
+            <label for="trainingType">Type</label>
+            <select name="training" id="trainingType" type="text" formControlName="type">
+                <option value="">Training Type</option>
+                <option value="B">Base</option>
+                <option value="I">Intensity</option>
+                <option value="S">Specific</option>
+                <option value="R">Recovery</option>
+                <option value="G">Goal</option>
+                <option value="T">Training</option>
+            </select>
+        </div>
+
+        <div class="button-container">
+            <button>Save</button>
+        </div>
+    </form>
+</div>
